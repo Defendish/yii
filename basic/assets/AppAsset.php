@@ -20,12 +20,24 @@ class AppAsset extends AssetBundle
     public $basePath = '@webroot';
     public $baseUrl = '@web';
     public $css = [
-        'css/site.css',
+        'https://fonts.googleapis.com/icon?family=Material+Icons',
+        'https://fonts.googleapis.com/css?family=Raleway:300,400,500,600,700,800,900',
+        "https://fonts.googleapis.com/css?family=Roboto:400,500,700,900",
+        "css/bootstrap.css",
+        "css/font-awesome.min.css",
+        "css/owl.carousel.min.css",
+        "css/owl.theme.default.min.css",
+        "style.css",
+        "responsive.css",
     ];
     public $js = [
+        'js/jquery-3.1.1.min.js',
+        'js/bootstrap.min.js',
+        'js/owl.carousel.min.js',
+        'js/active.js',
     ];
     public $depends = [
         'yii\web\YiiAsset',
-        'yii\bootstrap5\BootstrapAsset'
+        //'yii\bootstrap5\BootstrapAsset'
     ];
 }
