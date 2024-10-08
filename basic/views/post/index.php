@@ -50,9 +50,13 @@ $this->title = Yii::$app->name;
                         <div class="single-post">
                             <?= \yii\helpers\Html::img("@web/{$post->img}") ?>
                             <h3>
-                                <a href="<?= \yii\helpers\Url::to(['post/view', 'id' => $post->id]) ?>"><?= $post->title ?></a>
+                                <a href="<?= \yii\helpers\Url::to(['post/view', 'id'
+                                 => $post->id]) ?>"> <?= $post->title ?></a>
                             </h3>
-                            <h4><span>Category: <span class="author-name"><a href="<?= \yii\helpers\Url::to(['category/view','alias' => $post->category->alias]) ?>"><?= $post->category?->title ?></a></span></span>
+                            <h4><span>Category: <span class="author-name">
+                                        <a href="<?= \yii\helpers\Url::to(['category/view',
+                                            'alias' => $post->category->alias]) ?>"><?= $post->category->title ?>
+                                        </a></span></span>
                             </h4>
                             <p><?= $post->excerpt ?></p>
                             <h4><span><?= Yii::$app->formatter->asDate($post->created_at, format: 'php:d.m.y') ?></span></h4>
