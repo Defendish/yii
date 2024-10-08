@@ -1,12 +1,13 @@
 <?php
 
 /** @var yii\web\View $this */
+/** @var string $title */
 
 /** @var app\models\Post[] $posts */
 
 use yii\helpers\Url;
 
-$this->title = Yii::$app->name;
+$this->title = Yii::$app->name . ' | ' . $title;
 ?>
 
 

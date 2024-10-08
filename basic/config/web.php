@@ -54,10 +54,11 @@ $config = [
             'enablePrettyUrl' => true,
             'showScriptName' => false,
             'rules' => [
-                'page/<page:\d+>' =>'post/index',
-                '/' =>'post/index',
-                'post/<id:\d+>' =>'post/view',
                 'category/<alias:[a-zA-Z0-9-]+>' =>'category/view',
+                'category/<id:[a-zA-Z0-9-]+>' =>'category/view',
+                'page/<page:\d+>' =>'post/index',
+                'post/<id:\d+>' =>'post/view',
+                '/' =>'post/index',
             ],
         ],
 

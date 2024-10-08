@@ -12,14 +12,17 @@ class PostController extends Controller
     {
         //$posts = Post::find()->all();
         $query = Post::find()->with('category');
-        $pages = new Pagination(['totalCount' => $query->count(), 'pageSize' => 4,
-            'forcePageParam' => false,'pageSizeParam' => false ]);
+        $pages = new Pagination([
+            'totalCount' => $query->count(), 'pageSize' => 4,
+            'forcePageParam' => false, 'pageSizeParam' => false]);
         $posts = $query->offset($pages->offset)->limit($pages->limit)->all();
         return $this->render('index', compact('posts', 'pages'));
     }
+
     public function actionView($id)
     {
-        var_dump($id);
-        die;
+        $post = Post::findOne($id);
+
+        return $this->render('view', ['post' => $post]);
     }
 }
