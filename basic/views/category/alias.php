@@ -61,7 +61,7 @@ $this->title = Yii::$app->name . ' | ' . $title;
                                         <a href="<?= Url::to(['category/view', 'alias' => $post->category->alias]) ?>"><?= $post->category->title ?>
                                         </a></span></span>
                             </h4>
-                            <p><?= $post->excerpt ?></p>
+                            <p><?= $post->excertp ?></p>
                             <h4><span><?= Yii::$app->formatter->asDate($post->created_at, format: 'php:d.m.y') ?></span>
                             </h4>
 
